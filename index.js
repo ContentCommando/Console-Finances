@@ -86,3 +86,119 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+var newFinances = Array.prototype.concat.apply([], finances);
+
+console.log(newFinances);
+
+console.log(Object.values(newFinances));
+
+
+
+
+
+// finances.forEach((index) => {
+//   console.log(index)
+// });
+
+// console.log(finances);
+
+
+//Create an array of only balances
+
+// var sum = 0;
+
+// // var numberArray = 0;
+
+// // var total = 0
+
+// var loopedNum = 0;
+
+// for (i=0; i < finances.length; i++) {
+
+// loopedNum = finances[i][1]
+
+// sum = loopedNum + sum;
+
+// }
+
+// console.log(sum);
+
+// sum = 0;
+
+// cummBalances = 0;
+
+// var array = 0;
+
+// for (i=0; i < finances.length; i++) {
+
+// cummBalances = finances[i][1];
+
+// sum += cummBalances;
+
+// }
+
+// console.log(sum);
+
+
+
+// cummBalances.forEach(item => {
+//   sum += item;
+// });
+
+
+
+
+
+// sum = cummBalances + sum;
+
+// console.log(cummBalances);
+
+
+
+// console.log(sum)
+// monthDiff = 0;
+
+// avg = 0;
+
+// cummBalances =
+
+// sum = 0;
+
+// cummBalances = 0;
+
+// var array = 0;
+
+// for (i=0; i < finances.length; i++) {
+// console.log(finances[i][1]);
+
+// cummBalances = finances[i][1];
+
+// balances.forEach((item) => {
+//   console.log(index)
+// });
+
+
+
+
+
+// The total number of months included in the dataset.
+// console.log(finances.length);
+
+// The net total amount of Profit/Losses over the entire period.
+
+
+
+
+
+
+// The net total amount of Profit/Losses over the entire period.
+
+// The average of the **changes** in Profit/Losses over the entire period.
+//   * You will need to track what the total change in Profit/Losses are
+//   from month to month and then find the average.
+//   * (`Total/(Number of months - 1)`)
+
+// The greatest increase in Profit/Losses (date and amount) over the entire period.
+
+// The greatest decrease in Profit/Losses (date and amount) over the entire period.
