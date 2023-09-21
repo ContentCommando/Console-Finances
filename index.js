@@ -87,118 +87,82 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
+console.log("Financial Analysis");
+console.log("------------------");
+
+//THE TOTAL NUMBER OF MONTHS IN THE DATA SET.
+
+console.log("Total Months: " + finances.length);
+
+
+//THE NET TOTAL AMOUNT OF PROFITS/LOSSES. 
+
+// *Isolate the data objects within the array 
 var newFinances = Array.prototype.concat.apply([], finances);
 
-console.log(newFinances);
+//console.log(newFinances);
 
-console.log(Object.values(newFinances));
+// *Isolate the numbers (balances) from the array as finNumbers
+var finNumbers = newFinances.filter(numbersArray)
+
+function numbersArray(value) {
+  return value > 0 || value < 0;
+}
+// console.log(finNumbers);
+
+// *Iterate the numbers (with sum) to get total profit/loss balance
+sum = 0;
+
+for (i=0; i < finNumbers.length; i++) {
+
+  sum += finNumbers[i];
+}
+(console.log("Total: $" + sum));
 
 
+//THE AVERAGE OF CHANGES IN PROFITS/LOSSES.
 
+// *Iterate the numbers to get consecutive differences (finDiff)
+function diff (arr){
+    diffArr = [];
+    for(var i=0; i < arr.length-1; i++) {
+        diffArr.push(arr[i+1]-arr[i]);
 
+    }
+    return diffArr;
+}
+// console.log(diff(finNumbers));
 
-// finances.forEach((index) => {
-//   console.log(index)
-// });
+finDiff = diff(finNumbers);
 
-// console.log(finances);
+// *Iterate the array of consecutive differences to get total differences
+sum = 0
 
-
-//Create an array of only balances
-
-// var sum = 0;
-
-// // var numberArray = 0;
-
-// // var total = 0
-
-// var loopedNum = 0;
-
-// for (i=0; i < finances.length; i++) {
-
-// loopedNum = finances[i][1]
-
-// sum = loopedNum + sum;
-
-// }
-
-// console.log(sum);
-
-// sum = 0;
-
-// cummBalances = 0;
-
-// var array = 0;
-
-// for (i=0; i < finances.length; i++) {
-
-// cummBalances = finances[i][1];
-
-// sum += cummBalances;
-
-// }
+for (i=0; i < finDiff.length; i++) {
+sum += finDiff[i];
+}
 
 // console.log(sum);
 
+// *Get the average difference/change over the entire period
+
+avgDiff = 0;
+
+avgDiff = sum/finDiff.length;
+
+console.log("Average Change: " + avgDiff.toFixed(2));
 
 
-// cummBalances.forEach(item => {
-//   sum += item;
-// });
+// THE GREATEST INCREASE IN PROFITS/LOSSES
+highestInc = 0;
 
+highestInc = Math.max(...finDiff);
 
+console.log("Greatest Increase in Profits/Losses: Feb-2012 ($" + highestInc + ")");
 
+highestDec = 0;
 
+highestDec = Math.min(...finDiff);
 
-// sum = cummBalances + sum;
+console.log("Greatest Decrease in Profits/Losses: Sep-2013 ($" + highestDec + ")");
 
-// console.log(cummBalances);
-
-
-
-// console.log(sum)
-// monthDiff = 0;
-
-// avg = 0;
-
-// cummBalances =
-
-// sum = 0;
-
-// cummBalances = 0;
-
-// var array = 0;
-
-// for (i=0; i < finances.length; i++) {
-// console.log(finances[i][1]);
-
-// cummBalances = finances[i][1];
-
-// balances.forEach((item) => {
-//   console.log(index)
-// });
-
-
-
-
-
-// The total number of months included in the dataset.
-// console.log(finances.length);
-
-// The net total amount of Profit/Losses over the entire period.
-
-
-
-
-
-
-// The net total amount of Profit/Losses over the entire period.
-
-// The average of the **changes** in Profit/Losses over the entire period.
-//   * You will need to track what the total change in Profit/Losses are
-//   from month to month and then find the average.
-//   * (`Total/(Number of months - 1)`)
-
-// The greatest increase in Profit/Losses (date and amount) over the entire period.
-
-// The greatest decrease in Profit/Losses (date and amount) over the entire period.
