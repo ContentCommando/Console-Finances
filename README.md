@@ -18,7 +18,7 @@ available data, the application features algorithms that show the following:
 I relied on an array of programming skills learnt over the past couple of weeks, combining different helpful techniques to arrive at the MVP.
 
 1. **Documentation Review:**
-This was a technique I performed both at the beginning of this project and indeed through out the entire process of coding. I reviewed my instructors lessons  as well as a bunch of resources online.
+This was a technique I performed both at the beginning of this project and indeed through out the entire process of coding. I reviewed my instructor's lessons  as well as a bunch of resources online.
 
 2. **Pseudocoding:**
 This helped me create a map to see which directions I needed to follow. It was a good ice-breaker for this project.
@@ -32,7 +32,10 @@ I encountered the usual challenges of a newbie in the realm of javascript coding
 A most particular challenge was working data presented in an array of arrays, something I never encountered during my coding classes. But I relied on documentations to navigate the labyrinth. 
  
 ## Link to Application
-This is a link to the deployed application.
+This is a [link](https://contentcommando.github.io/Console-Finances/) to the deployed application.
 
 ## Mock-up
+![Alt text](<Sceenshot 2023-09-21.png>)
+
+
 
